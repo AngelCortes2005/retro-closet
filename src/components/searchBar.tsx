@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 function SearchBar() {
   return (
     <div className="flex w-full max-w-sm items-center gap-2">
-      <Input type="email" placeholder="Email" />
+      <Input type="text" placeholder="Buscar..." />
       <Button type="submit" variant="outline">
         <CiSearch />
       </Button>
