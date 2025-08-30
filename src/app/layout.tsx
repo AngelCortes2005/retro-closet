@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-[conic-gradient(at_top,_#111827,_#f3f4f6,_#111827)] min-h-screen p-0">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

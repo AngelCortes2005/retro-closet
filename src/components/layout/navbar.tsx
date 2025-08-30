@@ -1,7 +1,13 @@
-import React from 'react'
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, NavigationMenuTrigger, NavigationMenuContent } from '@/components/ui/navigation-menu' 
-import Link from 'next/link'
-
+import React from "react";
+import {
+  NavigationMenu,
+  NavigationMenuList,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+} from "@/components/ui/navigation-menu";
+import Link from "next/link";
 
 function ListItem({
   title,
@@ -20,7 +26,7 @@ function ListItem({
         </Link>
       </NavigationMenuLink>
     </li>
-  )
+  );
 }
 
 const superior: { title: string; href: string; description: string }[] = [
@@ -30,7 +36,7 @@ const superior: { title: string; href: string; description: string }[] = [
     description:
       "Prenda básica de manga corta, cómoda y versátil, ideal para uso diario casual.",
   },
-    {
+  {
     title: "Camisa",
     href: "/docs/primitives/alert-dialog",
     description:
@@ -51,7 +57,8 @@ const superior: { title: string; href: string; description: string }[] = [
   {
     title: "Chaqueta",
     href: "/docs/primitives/scroll-area",
-    description: "Prenda superior ligera o gruesa, usada como abrigo en distintos climas y modas.",
+    description:
+      "Prenda superior ligera o gruesa, usada como abrigo en distintos climas y modas.",
   },
   {
     title: "Abrigo",
@@ -71,7 +78,7 @@ const superior: { title: string; href: string; description: string }[] = [
     description:
       "Prenda sin mangas usada encima de camisas o suéteres para dar un toque distinto.",
   },
-]
+];
 
 const inferior: { title: string; href: string; description: string }[] = [
   {
@@ -86,31 +93,31 @@ const inferior: { title: string; href: string; description: string }[] = [
     description:
       "Pantalón de mezclilla, resistente y versátil, ícono atemporal en la moda global.",
   },
-    {
+  {
     title: "Shorts",
     href: "/docs/primitives/alert-dialog",
     description:
       "Prenda corta ligera, fresca y práctica, ideal para deportes o climas veraniegos.",
   },
-    {
+  {
     title: "Joggers",
     href: "/docs/primitives/alert-dialog",
     description:
       "Pantalón deportivo con puños ajustados, mezcla de confort y estilo urbano actual.",
   },
-    {
+  {
     title: "Pantaloneta",
     href: "/docs/primitives/alert-dialog",
     description:
       "Prenda ligera usada para deporte, natación o clima cálido, cómoda y práctica.",
   },
-    {
+  {
     title: "Cargo",
     href: "/docs/primitives/alert-dialog",
     description:
       "Pantalón con múltiples bolsillos, ideal para actividades al aire libre y estilo urbano.",
   },
-]
+];
 
 const calzado: { title: string; href: string; description: string }[] = [
   {
@@ -125,21 +132,21 @@ const calzado: { title: string; href: string; description: string }[] = [
     description:
       "Calzado elegante de cuero, usado en eventos, oficina y situaciones formales.",
   },
-    {
+  {
     title: "Sandalias",
     href: "/docs/primitives/alert-dialog",
     description:
       "Calzado abierto fresco, ideal para verano, playa o climas cálidos relajados.",
   },
-    {
+  {
     title: "Botas",
     href: "/docs/primitives/alert-dialog",
     description:
       "Calzado resistente que cubre tobillos o más, usado en moda, trabajo o protección.",
   },
-]
+];
 
-const Accesorios: {title: string; href: string; description: string}[] = [
+const Accesorios: { title: string; href: string; description: string }[] = [
   {
     title: "Gorra",
     href: "/docs/primitives/alert-dialog",
@@ -170,97 +177,90 @@ const Accesorios: {title: string; href: string; description: string}[] = [
     description:
       "Accesorio para proteger la vista del sol, práctico y popular en moda actual.",
   },
-    {
+  {
     title: "Joyería",
     href: "/docs/primitives/alert-dialog",
     description:
       "Accesorio para proteger la vista del sol, práctico y popular en moda actual.",
   },
-]
+];
 
 const Navbar = () => {
-
-  
   return (
     <>
-    <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Superior</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {superior.map((prenda) => (
-                <ListItem
-                  key={prenda.title}
-                  title={prenda.title}
-                  href={prenda.href}
-                >
-                  {prenda.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+      <NavigationMenu>
+        <NavigationMenuList>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Superior</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {superior.map((prenda) => (
+                  <ListItem
+                    key={prenda.title}
+                    title={prenda.title}
+                    href={prenda.href}
+                  >
+                    {prenda.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Inferior</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {inferior.map((prenda) => (
-                <ListItem
-                  key={prenda.title}
-                  title={prenda.title}
-                  href={prenda.href}
-                >
-                  {prenda.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Inferior</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {inferior.map((prenda) => (
+                  <ListItem
+                    key={prenda.title}
+                    title={prenda.title}
+                    href={prenda.href}
+                  >
+                    {prenda.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Calzado</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {calzado.map((prenda) => (
-                <ListItem
-                  key={prenda.title}
-                  title={prenda.title}
-                  href={prenda.href}
-                >
-                  {prenda.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Calzado</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {calzado.map((prenda) => (
+                  <ListItem
+                    key={prenda.title}
+                    title={prenda.title}
+                    href={prenda.href}
+                  >
+                    {prenda.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
 
-        <NavigationMenuItem>
-          <NavigationMenuTrigger>Accesorios</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-              {Accesorios.map((prenda) => (
-                <ListItem
-                  key={prenda.title}
-                  title={prenda.title}
-                  href={prenda.href}
-                >
-                  {prenda.description}
-                </ListItem>
-              ))}
-            </ul>
-          </NavigationMenuContent>
-        </NavigationMenuItem>
-
-      </NavigationMenuList>
-    </NavigationMenu>
-
+          <NavigationMenuItem>
+            <NavigationMenuTrigger>Accesorios</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {Accesorios.map((prenda) => (
+                  <ListItem
+                    key={prenda.title}
+                    title={prenda.title}
+                    href={prenda.href}
+                  >
+                    {prenda.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        </NavigationMenuList>
+      </NavigationMenu>
     </>
-  )
-}
+  );
+};
 
-
-
-
-export default Navbar
+export default Navbar;

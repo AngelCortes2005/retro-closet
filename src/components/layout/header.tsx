@@ -12,17 +12,17 @@ const Header = () => {
   const router = useRouter()
 
   return (
-    <div className='flex-col '>
+    <div className='flex-col bg-white m-0'>
         <div className='flex items-center justify-center gap-10'>
             <Image src="/assets/retrocloset-logo.png" alt="Logo" width={100} height={100} 
       onClick={() => router.push('/')} />
             <SearchBar />
             <div className='flex justify-between gap-1'>
-              <Button variant='outline' size='sm' onClick={() => router.push('/login')}>
+              <Button variant='outline' size='sm' onClick={() => router.push('/sign-in')}>
                 <FaRegUserCircle />Iniciar Sesión
               </Button>
                <div className="border-l h-8 mx-2"></div>
-              <Button variant='outline' size='sm' onClick={() => router.push('/signup')}>
+              <Button variant='outline' size='sm' onClick={() => router.push('/sign-up')}>
                 Registrarse
               </Button>
             </div>
@@ -32,8 +32,7 @@ const Header = () => {
         <div className='flex justify-center'>
             <Navbar/>
         </div> 
-
-        
+        <div className="border-1 w-screen mt-1.5"></div>
     </div>
   )
 }
