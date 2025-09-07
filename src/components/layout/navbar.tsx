@@ -185,11 +185,14 @@ const Accesorios: { title: string; href: string; description: string }[] = [
   },
 ];
 
-const Navbar = () => {
+
+
+const Navbar = ({type}: {type: NavType}) => {
+      const isDesktop = type === "desktop";
   return (
     <>
       <NavigationMenu>
-        <NavigationMenuList>
+        <NavigationMenuList className="flex flex-col md:flex-row">
           <NavigationMenuItem>
             <NavigationMenuTrigger>Superior</NavigationMenuTrigger>
             <NavigationMenuContent>
@@ -200,7 +203,7 @@ const Navbar = () => {
                     title={prenda.title}
                     href={prenda.href}
                   >
-                    {prenda.description}
+                    {isDesktop ? prenda.description : ""}
                   </ListItem>
                 ))}
               </ul>
@@ -217,7 +220,7 @@ const Navbar = () => {
                     title={prenda.title}
                     href={prenda.href}
                   >
-                    {prenda.description}
+                    {isDesktop ? prenda.description : ""}
                   </ListItem>
                 ))}
               </ul>
@@ -234,7 +237,7 @@ const Navbar = () => {
                     title={prenda.title}
                     href={prenda.href}
                   >
-                    {prenda.description}
+                    {isDesktop ? prenda.description : ""}
                   </ListItem>
                 ))}
               </ul>
@@ -251,7 +254,7 @@ const Navbar = () => {
                     title={prenda.title}
                     href={prenda.href}
                   >
-                    {prenda.description}
+                    {isDesktop ? prenda.description : ""}
                   </ListItem>
                 ))}
               </ul>

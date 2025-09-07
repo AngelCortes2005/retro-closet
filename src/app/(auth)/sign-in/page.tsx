@@ -16,7 +16,7 @@ const page = () => {
           />
           <h1 className="text-4xl font-bold text-center">¡Bienvenido de nuevo!</h1>
         </div>
-        <AuthForm />
+        <AuthForm type="sign-in" />
       </div>
     </div>
   );
